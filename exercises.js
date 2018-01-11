@@ -234,8 +234,16 @@ Write a function that will capitalize the first letter in each word in the phras
 */
 
 var myWay = "i've lived a life that's full, i've traveled each and every highway. but more, much more than this. i did it my way.";
-
-
+function capitalizeEveryWord(sentence) {
+	var newSentence = sentence.split(" ");
+	for (var i = 0; i < newSentence.length; i++) {
+		var character = newSentence[i].split("");
+		character[0] = character[0].toUpperCase();
+		newSentence[i] = character.join(" ");
+	}
+	return newSentence.join(" ");
+}
+console.log(capitalizeEveryWord(myWay));
 
 /* 14) Sightseeing
 Write a function that will loop through the multi-dimensional array and console.log the city and landmark on separate lines.
