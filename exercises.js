@@ -192,7 +192,20 @@ console.log(copyArray(valuesArray, copyValuesArray));
 Declare a variable named `topQuote` and assign it to a String value of your favorite one line quote.
 Write a function that will iterate through the string value and return the longest word in that quote. Console.log your result.
 */
+var topQuote = "Pizza is good but I want to eat Korean food.";
 
+function longestWord(str) {
+	  var strToArray = str.split(" "); //converts string to an array
+  var currentWord = ""; //to store the string 
+  for(var i =0; i<strToArray.length; i++){ //iterate through the string array
+    if(strToArray[i].length > currentWord.length){ //comparing if the word's length is longer than current word
+      currentWord = strToArray[i]; 
+    }
+  }
+  return currentWord;
+}
+
+console.log(longestWord(topQuote));
 
 
 /* 12) Puppet Master
@@ -201,7 +214,6 @@ Write a function named `generateArrayOfStrings` which takes a single argument `s
 
    @param Datatype: Array `storage`
    @return Datatype: Array
-
 */
 
 
