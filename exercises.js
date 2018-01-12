@@ -254,6 +254,12 @@ Note, please use two for loops to complete this problem
 
 var guide = [["Honolulu", "Waikiki"], ["Tokyo", "Tsukiji Fish Market"], ["Cairo", "Pyramids"],["Rome", "Colosseum"]];
 
+for (var i = 0; i < guide.length; i++){
+
+	for (var j = 0; j < guide[i].length; j++) {
+		console.log(guide[i][j]);
+	}
+}
 
 
 /* 15) Back to School
@@ -267,3 +273,52 @@ If the `enrolled` property is set to `true` then change that student's `graduate
 Console.log your result.
 */
 
+var currentCohort = [
+  {
+    name: 'Doug',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Pat',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Marsha',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Moira',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Ben',
+    graduated: false,
+    enrolled: true
+  },
+  {
+    name: 'Nigel the Giraffe',
+    graduated: false,
+    enrolled: false
+  },
+  {
+    name: 'Brandon the Shark',
+    graduated: false,
+    enrolled: true
+  }
+];
+
+function graduateAndSetNewClass (cohort) {
+	for (var i = 0; i < cohort.length; i++) {
+		if (cohort[i].enrolled === true) {
+			cohort[i].graduated = true;
+		} else {
+			cohort[i].enrolled = true;
+		}
+	}
+	return cohort;
+}
+console.log(graduateAndSetNewClass (currentCohort));
